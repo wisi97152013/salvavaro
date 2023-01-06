@@ -1,17 +1,15 @@
 package com.proyectoisw.salvavaro.models;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Usuarios")
+@Table(name = "usuarios")
 public class Usuario {
 
     @Id
-    @Column(name = "idUsuarios")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name ="id")
     private Long id;
     @Column(name = "nombre")
     private String nombre;
